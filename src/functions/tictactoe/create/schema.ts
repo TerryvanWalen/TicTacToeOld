@@ -1,7 +1,7 @@
 export default {
-  type: "object",
+  type: `object`,
   properties: {
-    gridSize: { type: 'number' }
+    gridSize: { type: `number` },
   },
-  required: ['gridSize']
+  required: [`gridSize`],
 } as const;

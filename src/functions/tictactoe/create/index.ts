@@ -6,8 +6,8 @@ export default {
   events: [
     {
       http: {
-        method: 'post',
-        path: 'createGame',
+        method: `post`,
+        path: `createGame`,
         request: {
           schemas: {
             'application/json': schema,
