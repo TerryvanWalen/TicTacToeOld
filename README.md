@@ -19,7 +19,7 @@ Depending on your preferred package manager, follow the instructions below to de
 
 In order to test the createTicTacToe function locally, run the following command:
 
-- `npx sls invoke local -f hello --path src/functions/tictactoe/create/mock.json` if you're using NPM
+- `npx sls invoke local -f createTicTacToe --path src/functions/tictactoe/create/mock.json` if you're using NPM
 
 ### Project structure
 
