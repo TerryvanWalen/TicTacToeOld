@@ -1,9 +1,9 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
+import createTicTacToe from '@functions/tictactoe/create';
 
 const serverlessConfiguration: AWS = {
-  service: 'ttt',
+  service: 'tictactoe',
   frameworkVersion: '3',
   plugins: ['serverless-esbuild'],
   provider: {
@@ -19,7 +19,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: { createTicTacToe },
   package: { individually: true },
   custom: {
     esbuild: {
