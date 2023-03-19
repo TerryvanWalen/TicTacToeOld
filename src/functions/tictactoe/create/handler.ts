@@ -3,12 +3,14 @@ import { formatJSONResponse } from '@libs/api-gateway';
 import { middyfy } from '@libs/lambda';
 
 import schema from './schema';
+import { createGame as createTicTacToe } from '../../../domain/tictactoe/index';
 
-const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async event => {
+const create: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async event => {
+  const game = createTicTacToe(event.body.gridSize);
   return formatJSONResponse({
-    message: `Hello ${event.body.name}, welcome to the exciting Serverless world!`,
+    message: game,
     event,
   });
 };
 
-export const main = middyfy(hello);
+export const main = middyfy(create);

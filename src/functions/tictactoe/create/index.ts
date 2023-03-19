@@ -7,7 +7,7 @@ export default {
     {
       http: {
         method: `post`,
-        path: `createGame`,
+        path: `tictactoe/create`,
         request: {
           schemas: {
             'application/json': schema,
