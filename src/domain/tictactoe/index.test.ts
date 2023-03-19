@@ -3,7 +3,7 @@ import { createGame, MAX_GRID_SIZE, MIN_GRID_SIZE } from '.';
 describe(`TicTacToe`, () => {
   describe(`create`, () => {
     test(`create game of default size`, () => {
-      const gridSize = 3;
+      const gridSize = MIN_GRID_SIZE;
       const game = createGame(gridSize);
       expect(game.board).toHaveLength(gridSize);
       expect(game.board[0]).toHaveLength(gridSize);
